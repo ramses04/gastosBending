@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --color-ink: #1d3557;
+  --color-paper: #f4efe8;
+  --color-fixed: #e8a598;
+  --color-leisure: #f3d77a;
+  --color-savings: #8fbc8f;
+  --color-accent: #a8c5d4;
+  --color-danger: #c0392b;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.safe-bottom {
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+}
+
+.year-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  box-shadow: 6px 0 10px -2px rgb(29 53 87 / 0.28);
+}
+
+.year-head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 4px 8px -2px rgb(29 53 87 / 0.22);
+}
+
+.year-head-corner {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  box-shadow:
+    6px 0 10px -2px rgb(29 53 87 / 0.28),
+    0 4px 8px -2px rgb(29 53 87 / 0.22);
+}
+
+.year-sticky-head {
+  background: #7ea6b8;
+}
+
+.year-sticky-fixed {
+  background: #e8a598;
+}
+
+.year-sticky-leisure {
+  background: #f3d77a;
+}
+
+.year-sticky-savings {
+  background: #8fbc8f;
+}
+
+.year-grid-wrap {
+  overflow: auto;
+  max-height: calc(100dvh - 9.5rem - env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling: touch;
+}
+
+.year-grid {
+  table-layout: fixed;
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.75rem;
+}
+
+.year-grid .col-concept {
+  width: 5.75rem;
+}
+
+.year-grid .col-month {
+  width: 3.15rem;
+}
+
+.year-grid .col-pct {
+  width: 2.75rem;
+}
+
+.year-grid td {
+  position: relative;
+  overflow: hidden;
+}
+
+.year-cell-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--color-ink);
+  border-radius: 0;
+  padding: 0 2px;
+  font-size: inherit;
+  line-height: 1;
+  text-align: center;
+  min-height: 0;
+  background: #fff;
+  outline: none;
+}

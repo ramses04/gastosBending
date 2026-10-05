@@ -1,0 +1,4831 @@
+{
+  "version": 1,
+  "exportedAt": "2026-10-05T16:00:00.000Z",
+  "settings": {
+    "id": "global",
+    "onboardingComplete": true,
+    "activeYearId": "year-2026",
+    "utilitiesSplit": 3,
+    "zgzReferenceRent": 1119.68,
+    "mortgageCategoryId": "cat-2026-hipoteca",
+    "gasCategoryId": "cat-2026-gas",
+    "luzCategoryId": "cat-2026-luz",
+    "aguaCategoryId": "cat-2026-agua"
+  },
+  "years": [
+    {
+      "id": "year-2025",
+      "year": 2025,
+      "openingSavings": 2735,
+      "updatedAt": "2026-10-04",
+      "notes": "Datos transcritos de la hoja 2025 (actualizado 31-dic). Ingreso neto 1848. Total ahorros 8675 = 2735 + 5940."
+    },
+    {
+      "id": "year-2026",
+      "year": 2026,
+      "openingSavings": 8695,
+      "updatedAt": "2026-10-05",
+      "notes": "Hoja 2026 (actualizado 5-oct). Ingreso neto 2058. Inicio ahorro 8695, total 500. Notas sueldo: 33k desde 05 / 29k hasta 04. Hipoteca 573 de sep/oct no entra en fijos (el total Excel no la incluye). Prime solo ene–abr."
+    }
+  ],
+  "incomePeriods": [
+    {
+      "id": "inc-2025-unico",
+      "yearId": "year-2025",
+      "fromMonth": 1,
+      "toMonth": 12,
+      "netAmount": 1848,
+      "notes": "Ingreso neto de la hoja 2025"
+    },
+    {
+      "id": "inc-2026-hasta-abril",
+      "yearId": "year-2026",
+      "fromMonth": 1,
+      "toMonth": 4,
+      "netAmount": 2058,
+      "notes": "29k hasta 04 (neto de la hoja: 2058)"
+    },
+    {
+      "id": "inc-2026-desde-mayo",
+      "yearId": "year-2026",
+      "fromMonth": 5,
+      "toMonth": 12,
+      "netAmount": 2058,
+      "notes": "33k desde 05 (neto de la hoja: 2058)"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-2025-acciona",
+      "yearId": "year-2025",
+      "name": "Acciona",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 40,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-acens",
+      "yearId": "year-2025",
+      "name": "Acens",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 5,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-agua",
+      "yearId": "year-2025",
+      "name": "Agua",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 8,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "agua"
+    },
+    {
+      "id": "cat-2025-ahorro",
+      "yearId": "year-2025",
+      "name": "Ahorro",
+      "group": "savings",
+      "color": "#8fbc8f",
+      "sortOrder": 20,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-ayuda",
+      "yearId": "year-2025",
+      "name": "Ayuda",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 35,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-comida",
+      "yearId": "year-2025",
+      "name": "Comida",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 31,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-compras",
+      "yearId": "year-2025",
+      "name": "Compras",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 33,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-delivery",
+      "yearId": "year-2025",
+      "name": "Delivery",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 32,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-gas",
+      "yearId": "year-2025",
+      "name": "Gas",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 6,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "gas"
+    },
+    {
+      "id": "cat-2025-glovo",
+      "yearId": "year-2025",
+      "name": "Uber One/Glovo",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 4,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-internet",
+      "yearId": "year-2025",
+      "name": "Internet/tlf",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 2,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-juegos",
+      "yearId": "year-2025",
+      "name": "Juegos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 38,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-luz",
+      "yearId": "year-2025",
+      "name": "Luz",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 7,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "luz"
+    },
+    {
+      "id": "cat-2025-mercado",
+      "yearId": "year-2025",
+      "name": "Mercado",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 30,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-metro",
+      "yearId": "year-2025",
+      "name": "Metro",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 1,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-misc",
+      "yearId": "year-2025",
+      "name": "Misceláneos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 34,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-prime",
+      "yearId": "year-2025",
+      "name": "Amazon Prime",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 3,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-regalos",
+      "yearId": "year-2025",
+      "name": "Regalos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 39,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-renta",
+      "yearId": "year-2025",
+      "name": "Renta",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 0,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-sputnik",
+      "yearId": "year-2025",
+      "name": "Sputnik",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 37,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-tarjeta",
+      "yearId": "year-2025",
+      "name": "Tarjeta conjunta",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 10,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-viajes",
+      "yearId": "year-2025",
+      "name": "Viajes",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 36,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2025-youtube",
+      "yearId": "year-2025",
+      "name": "YouTube",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 9,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-renta",
+      "yearId": "year-2026",
+      "name": "Renta",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 0,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-transporte",
+      "yearId": "year-2026",
+      "name": "Transporte",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 1,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-internet",
+      "yearId": "year-2026",
+      "name": "Internet/tlf",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 2,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-prime",
+      "yearId": "year-2026",
+      "name": "Amazon Prime",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 3,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-glovo",
+      "yearId": "year-2026",
+      "name": "Glovo",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 4,
+      "validFrom": 1,
+      "validTo": 6,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-hipoteca",
+      "yearId": "year-2026",
+      "name": "Hipoteca",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 5,
+      "validFrom": 7,
+      "validTo": 12,
+      "archived": false,
+      "isMortgage": true
+    },
+    {
+      "id": "cat-2026-acens",
+      "yearId": "year-2026",
+      "name": "Acens",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 6,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-gas",
+      "yearId": "year-2026",
+      "name": "Gas",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 7,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "gas"
+    },
+    {
+      "id": "cat-2026-luz",
+      "yearId": "year-2026",
+      "name": "Luz",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 8,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "luz"
+    },
+    {
+      "id": "cat-2026-agua",
+      "yearId": "year-2026",
+      "name": "Agua",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 9,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false,
+      "linkedUtility": "agua"
+    },
+    {
+      "id": "cat-2026-youtube",
+      "yearId": "year-2026",
+      "name": "YouTube",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 10,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-cursor",
+      "yearId": "year-2026",
+      "name": "Cursor",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 11,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-prestpiso",
+      "yearId": "year-2026",
+      "name": "Préstamo piso",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 12,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-prestmoto",
+      "yearId": "year-2026",
+      "name": "Préstamo moto",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 13,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-seguros",
+      "yearId": "year-2026",
+      "name": "Seguros",
+      "group": "fixed",
+      "color": "#e8a598",
+      "sortOrder": 14,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-ahorro",
+      "yearId": "year-2026",
+      "name": "Ahorro",
+      "group": "savings",
+      "color": "#8fbc8f",
+      "sortOrder": 20,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-mercado",
+      "yearId": "year-2026",
+      "name": "Mercado",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 30,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-comida",
+      "yearId": "year-2026",
+      "name": "Comida",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 31,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-delivery",
+      "yearId": "year-2026",
+      "name": "Delivery",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 32,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-compras",
+      "yearId": "year-2026",
+      "name": "Compras",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 33,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-misc",
+      "yearId": "year-2026",
+      "name": "Misceláneos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 34,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-ayuda",
+      "yearId": "year-2026",
+      "name": "Ayuda",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 35,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-viajes",
+      "yearId": "year-2026",
+      "name": "Viajes",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 36,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-sputnik",
+      "yearId": "year-2026",
+      "name": "Sputnik",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 37,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-juegos",
+      "yearId": "year-2026",
+      "name": "Juegos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 38,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-regalos",
+      "yearId": "year-2026",
+      "name": "Regalos",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 39,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-acciona",
+      "yearId": "year-2026",
+      "name": "Acciona",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 40,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-gasolina",
+      "yearId": "year-2026",
+      "name": "Gasolina",
+      "group": "leisure",
+      "color": "#f3d77a",
+      "sortOrder": 41,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-zgz-gas",
+      "yearId": "year-2026",
+      "name": "Gas",
+      "group": "zgz",
+      "color": "#7ba3b8",
+      "sortOrder": 50,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-zgz-luz",
+      "yearId": "year-2026",
+      "name": "Luz",
+      "group": "zgz",
+      "color": "#7ba3b8",
+      "sortOrder": 51,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-zgz-agua",
+      "yearId": "year-2026",
+      "name": "Agua",
+      "group": "zgz",
+      "color": "#7ba3b8",
+      "sortOrder": 52,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-zgz-comunidad",
+      "yearId": "year-2026",
+      "name": "Comunidad",
+      "group": "zgz",
+      "color": "#7ba3b8",
+      "sortOrder": 53,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    },
+    {
+      "id": "cat-2026-zgz-seguros",
+      "yearId": "year-2026",
+      "name": "Seguros",
+      "group": "zgz",
+      "color": "#7ba3b8",
+      "sortOrder": 54,
+      "validFrom": 1,
+      "validTo": 12,
+      "archived": false
+    }
+  ],
+  "recurrences": [],
+  "movements": [
+    {
+      "id": "0cdf0aff-c695-4b5f-b47d-a86be4f7c6ff",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-04-15",
+      "amount": 55.33,
+      "note": "Factura luz",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "2f214f8e-cb3e-4e1e-bed9-457374adc267"
+    },
+    {
+      "id": "2e5d7c78-e6c4-4aea-b793-499c8a246372",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-10-15",
+      "amount": 35.97,
+      "note": "Factura luz",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "f726d6f6-549b-41db-a448-da9a72f3a639"
+    },
+    {
+      "id": "2fba9a77-3599-45d9-abe9-32d5a01fa38b",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-06-15",
+      "amount": 49.99,
+      "note": "Factura luz",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "f1e64f66-e455-4c5a-8bfc-721d750f6374"
+    },
+    {
+      "id": "8f1b6d43-c6e0-4b8c-b733-3e7ceffdd910",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-08-15",
+      "amount": 33.05,
+      "note": "Factura gas",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "6bdd87e4-731b-4bc6-a17e-ad7cc95de949"
+    },
+    {
+      "id": "b8449055-c40c-46d6-bde3-a7f1d330d7e9",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-04-15",
+      "amount": 27.53,
+      "note": "Factura agua",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "5d67c705-efb6-4d27-85ba-e486b5849493"
+    },
+    {
+      "id": "cec93c4b-003b-41d4-aad5-3826e3e7b56e",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-12-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "d2376cbf-282a-4d36-8b6f-5a22e653588c",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-02-15",
+      "amount": 66.33,
+      "note": "Factura luz",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "8c2b9fef-83ef-4952-b48a-2d426246ab16"
+    },
+    {
+      "id": "d9b0cb07-0652-441f-b299-d7914469c816",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-06-15",
+      "amount": 49.75,
+      "note": "Factura gas",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "5aafbeeb-8982-4cf2-983a-0d9135bf333b"
+    },
+    {
+      "id": "eb974459-241e-443c-a33c-fab38636ddb9",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-02-15",
+      "amount": 28.33,
+      "note": "Factura agua",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "b078c88f-d496-4bbe-b4d6-23001ca2a333"
+    },
+    {
+      "id": "ec23bfd1-40a4-4865-bb4b-2d9d796b6fae",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-04-15",
+      "amount": 18,
+      "note": "Factura gas",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "729859e2-7c71-49c4-9710-914776f34fb5"
+    },
+    {
+      "id": "f70f8370-fbf6-4278-b7ff-5f95a28ffc9c",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-02-15",
+      "amount": 56.33,
+      "note": "Factura gas",
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "15b7fb1b-1535-497d-89f0-92bc9eaf43d2"
+    },
+    {
+      "id": "mov-2025-acciona-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-03-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-04-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-05-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-06-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-07-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-08-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-09-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-10-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-11-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acciona-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acciona",
+      "date": "2025-12-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-01-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-02-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-03-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-04-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-05-01",
+      "amount": 18,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-06-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-07-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-acens-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-acens",
+      "date": "2025-08-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-agua-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-02-15",
+      "amount": 51,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-agua-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-06-15",
+      "amount": 18.32,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-agua-06",
+      "note": "Factura agua 73.27 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-agua-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-08-15",
+      "amount": 66,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-agua-08",
+      "note": "Factura agua 73.27 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-agua-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-10-15",
+      "amount": 7.87,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-agua-10",
+      "note": "Factura agua 23 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-agua-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-agua",
+      "date": "2025-12-15",
+      "amount": 17.51,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-agua-12",
+      "note": "Factura agua 52.54 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-ahorro-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-01-01",
+      "amount": 600,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-02-01",
+      "amount": -250,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-03-01",
+      "amount": 800,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-04-01",
+      "amount": 1710,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-05-01",
+      "amount": 150,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-06-01",
+      "amount": 800,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-07-01",
+      "amount": -1000,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-08-01",
+      "amount": -1000,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-09-01",
+      "amount": 430,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-10-01",
+      "amount": 2000,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-11-01",
+      "amount": -300,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ahorro-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ahorro",
+      "date": "2025-12-01",
+      "amount": 2000,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ayuda-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ayuda",
+      "date": "2025-02-01",
+      "amount": 100,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ayuda-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ayuda",
+      "date": "2025-03-01",
+      "amount": 100,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ayuda-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ayuda",
+      "date": "2025-08-01",
+      "amount": 1000,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-ayuda-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-ayuda",
+      "date": "2025-09-01",
+      "amount": 180,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-01-01",
+      "amount": 66,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-02-01",
+      "amount": 130,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-03-01",
+      "amount": 129,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-04-01",
+      "amount": 159,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-05-01",
+      "amount": 161,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-06-01",
+      "amount": 122,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-07-01",
+      "amount": 144,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-08-01",
+      "amount": 212,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-09-01",
+      "amount": 202,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-10-01",
+      "amount": 234,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-11-01",
+      "amount": 84,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-comida-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-comida",
+      "date": "2025-12-01",
+      "amount": 363,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-01-01",
+      "amount": 113,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-02-01",
+      "amount": 40,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-03-01",
+      "amount": 177,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-04-01",
+      "amount": 245,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-05-01",
+      "amount": 110,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-06-01",
+      "amount": 224,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-07-01",
+      "amount": 104,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-08-01",
+      "amount": 210,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-09-01",
+      "amount": 206,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-10-01",
+      "amount": 150,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-11-01",
+      "amount": 148,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-compras-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-compras",
+      "date": "2025-12-01",
+      "amount": 219,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-01-01",
+      "amount": 80,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-02-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-03-01",
+      "amount": 65,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-04-01",
+      "amount": 71,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-05-01",
+      "amount": 142,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-06-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-07-01",
+      "amount": 99,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-08-01",
+      "amount": 91,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-09-01",
+      "amount": 121,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-10-01",
+      "amount": 73,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-delivery-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-delivery",
+      "date": "2025-11-01",
+      "amount": 76,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-gas-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-02-15",
+      "amount": 101.4,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-gas-02",
+      "note": "Factura gas 166 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-gas-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-04-15",
+      "amount": 21.8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-gas-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-10-15",
+      "amount": 33.97,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-gas-10",
+      "note": "Factura gas 101.91 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-gas-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-gas",
+      "date": "2025-12-15",
+      "amount": 47.11,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-gas-12",
+      "note": "Factura gas 141.32 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-glovo-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-01-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-02-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-03-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-04-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-05-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-06-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-07-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-08-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-09-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-10-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-11-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-glovo-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-glovo",
+      "date": "2025-12-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-01-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-02-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-03-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-04-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-05-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-06-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-07-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-08-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-09-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-10-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-11-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-internet-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-internet",
+      "date": "2025-12-01",
+      "amount": 70,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-01-01",
+      "amount": 13,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-02-01",
+      "amount": 36,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-03-01",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-04-01",
+      "amount": 10,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-05-01",
+      "amount": 25,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-06-01",
+      "amount": 4,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-07-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-08-01",
+      "amount": 17,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-10-01",
+      "amount": 11,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-juegos-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-juegos",
+      "date": "2025-11-01",
+      "amount": 59,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-luz-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-02-15",
+      "amount": 119,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-luz-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-04-15",
+      "amount": 68,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-luz-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-08-15",
+      "amount": 210,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-luz-08",
+      "note": "Factura luz 137.64 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-luz-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-luz",
+      "date": "2025-12-15",
+      "amount": 29.88,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2025-luz-12",
+      "note": "Factura luz 89.66 € (cuota de la hoja)"
+    },
+    {
+      "id": "mov-2025-mercado-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-01-01",
+      "amount": 25,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-02-01",
+      "amount": 236,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-03-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-04-01",
+      "amount": 78,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-05-01",
+      "amount": 167,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-06-01",
+      "amount": 36,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-07-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-08-01",
+      "amount": 102,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-09-01",
+      "amount": 165,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-10-01",
+      "amount": 152,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-11-01",
+      "amount": 154,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-mercado-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-mercado",
+      "date": "2025-12-01",
+      "amount": 200,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-01-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-02-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-03-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-04-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-05-01",
+      "amount": 15,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-06-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-07-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-08-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-09-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-10-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-11-01",
+      "amount": 14,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-metro-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-metro",
+      "date": "2025-12-01",
+      "amount": 28.5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-01-01",
+      "amount": 32,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-02-01",
+      "amount": 14,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-03-01",
+      "amount": 155,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-04-01",
+      "amount": 3,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-05-01",
+      "amount": 31,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-06-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-07-01",
+      "amount": 75,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-08-01",
+      "amount": 64,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-09-01",
+      "amount": 146,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-10-01",
+      "amount": 70,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-11-01",
+      "amount": 40,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-misc-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-misc",
+      "date": "2025-12-01",
+      "amount": 95,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-01-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-02-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-03-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-04-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-05-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-06-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-07-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-08-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-09-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-10-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-11-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-prime-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-prime",
+      "date": "2025-12-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-01-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-02-01",
+      "amount": 92,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-03-01",
+      "amount": 13,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-04-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-05-01",
+      "amount": 83,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-06-01",
+      "amount": 95,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-07-01",
+      "amount": 254,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-08-01",
+      "amount": 40,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-09-01",
+      "amount": 230,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-10-01",
+      "amount": 116,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-regalos-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-regalos",
+      "date": "2025-11-01",
+      "amount": 12,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-01-01",
+      "amount": 454,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-02-01",
+      "amount": 534,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-03-01",
+      "amount": 534,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-04-01",
+      "amount": 534,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-05-01",
+      "amount": 388,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-06-01",
+      "amount": 390,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-07-01",
+      "amount": 744,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-08-01",
+      "amount": 363,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-09-01",
+      "amount": 363,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-10-01",
+      "amount": 363,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-11-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-renta-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-renta",
+      "date": "2025-12-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-sputnik-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-sputnik",
+      "date": "2025-02-01",
+      "amount": 174,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-sputnik-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-sputnik",
+      "date": "2025-05-01",
+      "amount": 174,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-sputnik-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-sputnik",
+      "date": "2025-08-01",
+      "amount": 188,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-sputnik-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-sputnik",
+      "date": "2025-11-01",
+      "amount": 188,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-tarjeta-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-tarjeta",
+      "date": "2025-01-01",
+      "amount": 150,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-tarjeta-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-tarjeta",
+      "date": "2025-03-01",
+      "amount": 120,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-tarjeta-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-tarjeta",
+      "date": "2025-04-01",
+      "amount": 150,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-02-01",
+      "amount": 74,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-03-01",
+      "amount": 15,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-05-01",
+      "amount": 20,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-06-01",
+      "amount": 181,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-07-01",
+      "amount": 1101,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-08-01",
+      "amount": 290,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-09-01",
+      "amount": 265,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-11-01",
+      "amount": 500,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-viajes-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-viajes",
+      "date": "2025-12-01",
+      "amount": 576,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-01",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-01-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-02",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-02-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-03",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-03-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-04",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-04-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-05",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-05-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-06",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-06-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-07",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-07-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-08",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-08-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-09",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-09-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-10",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-10-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-11",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-11-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2025-youtube-12",
+      "yearId": "year-2025",
+      "categoryId": "cat-2025-youtube",
+      "date": "2025-12-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-01-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-02-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-03-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-04-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-05-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-06-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-07-01",
+      "amount": 513,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-08-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-09-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-renta-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-renta",
+      "date": "2026-10-01",
+      "amount": 373,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-01-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-02-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-03-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-04-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-05-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-06-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-07-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-transporte-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-transporte",
+      "date": "2026-08-01",
+      "amount": 16,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-01-01",
+      "amount": 106,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-02-01",
+      "amount": 64,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-03-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-04-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-05-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-06-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-07-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-08-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-internet-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-internet",
+      "date": "2026-09-01",
+      "amount": 9,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prime-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prime",
+      "date": "2026-01-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prime-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prime",
+      "date": "2026-02-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prime-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prime",
+      "date": "2026-03-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prime-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prime",
+      "date": "2026-04-01",
+      "amount": 5,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-01-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-02-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-03-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-04-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-05-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-glovo-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-glovo",
+      "date": "2026-06-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-hipoteca-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-hipoteca",
+      "date": "2026-07-01",
+      "amount": 85,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-hipoteca-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-hipoteca",
+      "date": "2026-08-01",
+      "amount": 111,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-01-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-02-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-03-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-04-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-05-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-06-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-07-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-08-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acens-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acens",
+      "date": "2026-09-01",
+      "amount": 6,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-01-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-gas-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-02-15",
+      "amount": 35.78,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-gas-02",
+      "note": "Factura gas 107.34 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-gas-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-03-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-gas-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-04-15",
+      "amount": 31.28,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-05-15",
+      "amount": 9.92,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-06-15",
+      "amount": 18.31,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-07-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-gas-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-08-15",
+      "amount": 28.61,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-09-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-gas-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-10-15",
+      "amount": 16.94,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gas-11",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-11-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-gas-12",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gas",
+      "date": "2026-12-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-luz-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-01-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-luz-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-02-15",
+      "amount": 40.05,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-02",
+      "note": "Factura luz 120.15 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-03-15",
+      "amount": 19.14,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-03",
+      "note": "Factura luz 57.43 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-04-15",
+      "amount": 13.28,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-04",
+      "note": "Factura luz 39.84 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-05-15",
+      "amount": 15.37,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-05",
+      "note": "Factura luz 46.11 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-06-15",
+      "amount": 14.58,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-06",
+      "note": "Factura luz 43.74 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-07-15",
+      "amount": 19,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-07",
+      "note": "Factura luz 57 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-08-15",
+      "amount": 17.67,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-08",
+      "note": "Factura luz 53 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-09-15",
+      "amount": 17.32,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-09",
+      "note": "Factura luz 51.97 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-10-15",
+      "amount": 18.38,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-luz-10",
+      "note": "Factura luz 55.15 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-luz-11",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-11-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-luz-12",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-luz",
+      "date": "2026-12-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-01-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-02-15",
+      "amount": 15.66,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-agua-02",
+      "note": "Factura agua 46.98 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-agua-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-03-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-04-15",
+      "amount": 17.63,
+      "source": "utility",
+      "status": "confirmed",
+      "utilityBillId": "bill-2026-agua-04",
+      "note": "Factura agua 52.88 € ÷ 3"
+    },
+    {
+      "id": "mov-2026-agua-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-05-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-06-15",
+      "amount": 15.37,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-agua-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-07-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-08-15",
+      "amount": 15.66,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-agua-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-09-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-10-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-11",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-11-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-agua-12",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-agua",
+      "date": "2026-12-15",
+      "amount": 0,
+      "source": "grid",
+      "status": "confirmed",
+      "note": "Cero explícito de la hoja"
+    },
+    {
+      "id": "mov-2026-youtube-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-01-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-02-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-03-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-04-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-05-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-06-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-07-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-08-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-youtube-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-youtube",
+      "date": "2026-09-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-01-01",
+      "amount": 18,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-02-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-03-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-04-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-05-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-06-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-07-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-08-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-09-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-cursor-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-cursor",
+      "date": "2026-10-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prestpiso-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prestpiso",
+      "date": "2026-09-01",
+      "amount": 99,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prestpiso-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prestpiso",
+      "date": "2026-10-01",
+      "amount": 99,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-prestmoto-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-prestmoto",
+      "date": "2026-09-01",
+      "amount": 117,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-01-01",
+      "amount": 25,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-02-01",
+      "amount": 254,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-03-01",
+      "amount": 477,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-04-01",
+      "amount": 1237,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-05-01",
+      "amount": -8572,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-06-01",
+      "amount": 1600,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-07-01",
+      "amount": -3716,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-09-01",
+      "amount": 1500,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-ahorro-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-ahorro",
+      "date": "2026-10-01",
+      "amount": -1000,
+      "source": "manual",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-01-01",
+      "amount": 167,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-02-01",
+      "amount": 169,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-03-01",
+      "amount": 280,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-04-01",
+      "amount": 139,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-05-01",
+      "amount": 319,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-06-01",
+      "amount": 237,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-07-01",
+      "amount": 237,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-08-01",
+      "amount": 216,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-09-01",
+      "amount": 287,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-mercado-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-mercado",
+      "date": "2026-10-01",
+      "amount": 43,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-01-01",
+      "amount": 146,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-02-01",
+      "amount": 185,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-03-01",
+      "amount": 273,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-04-01",
+      "amount": 115,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-05-01",
+      "amount": 278,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-06-01",
+      "amount": 263,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-07-01",
+      "amount": 236,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-08-01",
+      "amount": 231,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-09-01",
+      "amount": 96,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-comida-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-comida",
+      "date": "2026-10-01",
+      "amount": 78,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-01-01",
+      "amount": 20,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-03-01",
+      "amount": 23,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-04-01",
+      "amount": 14,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-05-01",
+      "amount": 23,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-06-01",
+      "amount": 22,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-07-01",
+      "amount": 11,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-08-01",
+      "amount": 18,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-delivery-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-delivery",
+      "date": "2026-09-01",
+      "amount": 45,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-01-01",
+      "amount": 95,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-02-01",
+      "amount": 36,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-03-01",
+      "amount": 269,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-04-01",
+      "amount": 515,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-05-01",
+      "amount": 212,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-06-01",
+      "amount": 134,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-07-01",
+      "amount": 55,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-08-01",
+      "amount": 1752,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-09-01",
+      "amount": 887,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-10-01",
+      "amount": 116,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-compras-11",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-compras",
+      "date": "2026-11-01",
+      "amount": 95,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-01-01",
+      "amount": 77,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-03-01",
+      "amount": 76,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-04-01",
+      "amount": 140,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-05-01",
+      "amount": 49,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-06-01",
+      "amount": 95,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-07-01",
+      "amount": 116,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-08-01",
+      "amount": 52,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-misc-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-misc",
+      "date": "2026-09-01",
+      "amount": 7,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-01-01",
+      "amount": 610,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-02-01",
+      "amount": 413,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-03-01",
+      "amount": 460,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-04-01",
+      "amount": 130,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-05-01",
+      "amount": 460,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-06-01",
+      "amount": 82,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-07-01",
+      "amount": 50,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-08-01",
+      "amount": 200,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-09-01",
+      "amount": 444,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-10-01",
+      "amount": 69,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-viajes-11",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-viajes",
+      "date": "2026-11-01",
+      "amount": 23,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-sputnik-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-sputnik",
+      "date": "2026-02-01",
+      "amount": 188,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-sputnik-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-sputnik",
+      "date": "2026-05-01",
+      "amount": 188,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-sputnik-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-sputnik",
+      "date": "2026-07-01",
+      "amount": 588,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-01-01",
+      "amount": 9,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-02-01",
+      "amount": 16,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-03-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-06-01",
+      "amount": 1,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-07-01",
+      "amount": 23,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-08-01",
+      "amount": 13,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-juegos-10",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-juegos",
+      "date": "2026-10-01",
+      "amount": 48,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-01",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-01-01",
+      "amount": 26,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-03",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-03-01",
+      "amount": 32,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-05",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-05-01",
+      "amount": 47,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-06-01",
+      "amount": 30,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-07",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-07-01",
+      "amount": 12,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-regalos-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-regalos",
+      "date": "2026-08-01",
+      "amount": 8,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acciona-02",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acciona",
+      "date": "2026-02-01",
+      "amount": 126,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acciona-04",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acciona",
+      "date": "2026-04-01",
+      "amount": 126,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acciona-06",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acciona",
+      "date": "2026-06-01",
+      "amount": 110,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-acciona-08",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-acciona",
+      "date": "2026-08-01",
+      "amount": 55,
+      "source": "grid",
+      "status": "confirmed"
+    },
+    {
+      "id": "mov-2026-gasolina-09",
+      "yearId": "year-2026",
+      "categoryId": "cat-2026-gasolina",
+      "date": "2026-09-01",
+      "amount": 28,
+      "source": "grid",
+      "status": "confirmed"
+    }
+  ],
+  "utilityBills": [
+    {
+      "id": "15b7fb1b-1535-497d-89f0-92bc9eaf43d2",
+      "yearId": "year-2025",
+      "kind": "gas",
+      "month": 2,
+      "amount": 169
+    },
+    {
+      "id": "2f214f8e-cb3e-4e1e-bed9-457374adc267",
+      "yearId": "year-2025",
+      "kind": "luz",
+      "month": 4,
+      "amount": 166
+    },
+    {
+      "id": "5aafbeeb-8982-4cf2-983a-0d9135bf333b",
+      "yearId": "year-2025",
+      "kind": "gas",
+      "month": 6,
+      "amount": 149.24
+    },
+    {
+      "id": "5d67c705-efb6-4d27-85ba-e486b5849493",
+      "yearId": "year-2025",
+      "kind": "agua",
+      "month": 4,
+      "amount": 82.6
+    },
+    {
+      "id": "6bdd87e4-731b-4bc6-a17e-ad7cc95de949",
+      "yearId": "year-2025",
+      "kind": "gas",
+      "month": 8,
+      "amount": 99.16
+    },
+    {
+      "id": "729859e2-7c71-49c4-9710-914776f34fb5",
+      "yearId": "year-2025",
+      "kind": "gas",
+      "month": 4,
+      "amount": 54
+    },
+    {
+      "id": "8c2b9fef-83ef-4952-b48a-2d426246ab16",
+      "yearId": "year-2025",
+      "kind": "luz",
+      "month": 2,
+      "amount": 199
+    },
+    {
+      "id": "b078c88f-d496-4bbe-b4d6-23001ca2a333",
+      "yearId": "year-2025",
+      "kind": "agua",
+      "month": 2,
+      "amount": 85
+    },
+    {
+      "id": "bill-2025-agua-06",
+      "kind": "agua",
+      "month": 6,
+      "amount": 73.27,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-agua-08",
+      "kind": "agua",
+      "month": 8,
+      "amount": 73.27,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-agua-10",
+      "kind": "agua",
+      "month": 10,
+      "amount": 23,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-agua-12",
+      "kind": "agua",
+      "month": 12,
+      "amount": 52.54,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-gas-02",
+      "kind": "gas",
+      "month": 2,
+      "amount": 166,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-gas-10",
+      "kind": "gas",
+      "month": 10,
+      "amount": 101.91,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-gas-12",
+      "kind": "gas",
+      "month": 12,
+      "amount": 141.32,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-luz-08",
+      "kind": "luz",
+      "month": 8,
+      "amount": 137.64,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "bill-2025-luz-12",
+      "kind": "luz",
+      "month": 12,
+      "amount": 89.66,
+      "yearId": "year-2025"
+    },
+    {
+      "id": "f1e64f66-e455-4c5a-8bfc-721d750f6374",
+      "yearId": "year-2025",
+      "kind": "luz",
+      "month": 6,
+      "amount": 149.98
+    },
+    {
+      "id": "f726d6f6-549b-41db-a448-da9a72f3a639",
+      "yearId": "year-2025",
+      "kind": "luz",
+      "month": 10,
+      "amount": 107.91
+    },
+    {
+      "id": "bill-2026-gas-02",
+      "kind": "gas",
+      "month": 2,
+      "amount": 107.34,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-gas-03",
+      "kind": "gas",
+      "month": 3,
+      "amount": 93.83,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-gas-04",
+      "kind": "gas",
+      "month": 4,
+      "amount": 29.76,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-gas-05",
+      "kind": "gas",
+      "month": 5,
+      "amount": 54.92,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-gas-06",
+      "kind": "gas",
+      "month": 6,
+      "amount": 86.83,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-gas-07",
+      "kind": "gas",
+      "month": 7,
+      "amount": 50.81,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-02",
+      "kind": "luz",
+      "month": 2,
+      "amount": 120.15,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-03",
+      "kind": "luz",
+      "month": 3,
+      "amount": 57.43,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-04",
+      "kind": "luz",
+      "month": 4,
+      "amount": 39.84,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-05",
+      "kind": "luz",
+      "month": 5,
+      "amount": 46.11,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-06",
+      "kind": "luz",
+      "month": 6,
+      "amount": 43.74,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-07",
+      "kind": "luz",
+      "month": 7,
+      "amount": 57,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-08",
+      "kind": "luz",
+      "month": 8,
+      "amount": 53,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-09",
+      "kind": "luz",
+      "month": 9,
+      "amount": 51.97,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-luz-10",
+      "kind": "luz",
+      "month": 10,
+      "amount": 55.15,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-agua-02",
+      "kind": "agua",
+      "month": 2,
+      "amount": 46.98,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-agua-04",
+      "kind": "agua",
+      "month": 4,
+      "amount": 52.88,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-agua-06",
+      "kind": "agua",
+      "month": 6,
+      "amount": 46.98,
+      "yearId": "year-2026",
+      "split": 3
+    },
+    {
+      "id": "bill-2026-agua-07",
+      "kind": "agua",
+      "month": 7,
+      "amount": 46.98,
+      "yearId": "year-2026",
+      "split": 3
+    }
+  ]
+}
