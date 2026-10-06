@@ -19,11 +19,12 @@ export function SettingsPage() {
 
   if (!year || !settings) return null
   const activeYear = year
+  const activeSettings = settings
 
   async function save() {
     const openingSavings = parseAmount(opening)
     const utilitiesSplit = Number(split.replace(',', '.'))
-    const zgzReferenceRent = showZgz ? parseAmount(rent) : (settings.zgzReferenceRent ?? 0)
+    const zgzReferenceRent = showZgz ? parseAmount(rent) : activeSettings.zgzReferenceRent
     if (openingSavings === null || !utilitiesSplit || zgzReferenceRent === null) return
     await db.years.update(activeYear.id, { openingSavings, updatedAt })
     await db.settings.update('global', { utilitiesSplit, zgzReferenceRent })
