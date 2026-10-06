@@ -34,13 +34,13 @@ describe('cellFromMovements', () => {
         yearId: 'y',
         categoryId: 'c',
         date: '2026-07-01',
-        amount: 373,
+        amount: 400,
         source: 'recurrence',
         status: 'pending',
       },
     ])
     expect(cell.kind).toBe('pending')
-    expect(cell.amount).toBe(373)
+    expect(cell.amount).toBe(400)
   })
 })
 
@@ -104,7 +104,7 @@ describe('totales y zgz', () => {
   ]
 
   const movements: Movement[] = [
-    { id: '1', yearId: 'y', categoryId: 'renta', date: '2026-01-01', amount: 373, source: 'manual', status: 'confirmed' },
+    { id: '1', yearId: 'y', categoryId: 'renta', date: '2026-01-01', amount: 400, source: 'manual', status: 'confirmed' },
     { id: '2', yearId: 'y', categoryId: 'ocio', date: '2026-01-03', amount: 50, source: 'manual', status: 'confirmed' },
     { id: '3', yearId: 'y', categoryId: 'aho', date: '2026-01-31', amount: 25, source: 'manual', status: 'confirmed' },
     { id: '4', yearId: 'y', categoryId: 'hip', date: '2026-07-01', amount: 400, source: 'manual', status: 'confirmed' },
@@ -114,14 +114,14 @@ describe('totales y zgz', () => {
   it('calcula saldo de ahorro', () => {
     const t = yearTotals(movements, cats, [{ id: 'i', yearId: 'y', fromMonth: 1, toMonth: 12, netAmount: 2000 }], 1000)
     expect(t.currentSavings).toBe(1025)
-    expect(t.fixed).toBe(773)
+    expect(t.fixed).toBe(800)
   })
 
   it('A devolver = renta ZGZ − hipoteca − gastos ZGZ', () => {
     const settings: AppSettings = {
       id: 'global',
       utilitiesSplit: 3,
-      zgzReferenceRent: 1119.68,
+      zgzReferenceRent: 1000,
       mortgageCategoryId: 'hip',
       gasCategoryId: null,
       luzCategoryId: null,
@@ -130,7 +130,29 @@ describe('totales y zgz', () => {
       onboardingComplete: true,
     }
     const r = zgzMonthBreakdown(movements, cats, settings, 2026, 7)
-    expect(r.toReturn).toBeCloseTo(1119.68 - 400 - 80, 2)
+    expect(r.mortgageFromSheet).toBe(400)
+    expect(r.toReturn).toBeCloseTo(1000 - 400 - 80, 2)
+
+    const withCustom: Category = {
+      id: 'zhip',
+      yearId: 'y',
+      name: 'Hipoteca',
+      group: 'zgz',
+      color: '#7ba3b8',
+      sortOrder: 1,
+      validFrom: 1,
+      validTo: 12,
+      archived: false,
+      isZgzMortgage: true,
+    }
+    const customMoves: Movement[] = [
+      ...movements,
+      { id: '6', yearId: 'y', categoryId: 'zhip', date: '2026-07-10', amount: 90, source: 'manual', status: 'confirmed' },
+    ]
+    const custom = zgzMonthBreakdown(customMoves, [...cats, withCustom], settings, 2026, 7)
+    expect(custom.mortgage).toBe(90)
+    expect(custom.zgz).toBe(80)
+    expect(custom.toReturn).toBeCloseTo(1000 - 90 - 80, 2)
   })
 
   it('porcentaje alerta y cuota de factura', () => {

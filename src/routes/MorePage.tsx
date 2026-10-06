@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ScreenHeader } from '../components/ui'
+import { hasZgzData } from '../domain/zgz'
 import { useYearState } from '../state/YearContext'
 
 const links = [
@@ -14,12 +15,13 @@ const links = [
 ]
 
 export function MorePage() {
-  const { year } = useYearState()
+  const { year, categories } = useYearState()
+  const items = hasZgzData(categories) ? links : links.filter((item) => item.to !== '/mas/zgz')
   return (
     <>
       <ScreenHeader title="Más" subtitle={year ? `Año ${year.year}` : undefined} />
       <ul className="space-y-2">
-        {links.map((item) => (
+        {items.map((item) => (
           <li key={item.to}>
             <Link
               to={item.to}

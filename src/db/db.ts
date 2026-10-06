@@ -36,8 +36,8 @@ export const db = new GastosDB()
 
 export const defaultSettings = (): AppSettings => ({
   id: 'global',
-  utilitiesSplit: 3,
-  zgzReferenceRent: 1119.68,
+  utilitiesSplit: 1,
+  zgzReferenceRent: 0,
   mortgageCategoryId: null,
   gasCategoryId: null,
   luzCategoryId: null,

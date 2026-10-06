@@ -125,7 +125,7 @@ export async function loadDemoData(): Promise<void> {
   const renta = categories.find((c) => c.name === 'Renta' && c.group === 'fixed')
   const mercado = categories.find((c) => c.name === 'Mercado')
   const ahorro = categories.find((c) => c.name === 'Ahorro')
-  const youtube = categories.find((c) => c.name === 'YouTube')
+  const subs = categories.find((c) => c.name === 'Suscripciones')
 
   const demo = []
   if (renta) {
@@ -134,19 +134,19 @@ export async function loadDemoData(): Promise<void> {
       yearId,
       categoryId: renta.id,
       date: `${year.year}-01-01`,
-      amount: 373,
+      amount: 400,
       note: 'Ejemplo',
       source: 'manual' as const,
       status: 'confirmed' as const,
     })
   }
-  if (youtube) {
+  if (subs) {
     demo.push({
       id: newId(),
       yearId,
-      categoryId: youtube.id,
+      categoryId: subs.id,
       date: `${year.year}-01-05`,
-      amount: 26,
+      amount: 10,
       note: 'Ejemplo',
       source: 'manual' as const,
       status: 'confirmed' as const,
@@ -158,7 +158,7 @@ export async function loadDemoData(): Promise<void> {
       yearId,
       categoryId: mercado.id,
       date: `${year.year}-01-08`,
-      amount: 84.5,
+      amount: 50,
       note: 'Ejemplo',
       source: 'manual' as const,
       status: 'confirmed' as const,
@@ -170,7 +170,7 @@ export async function loadDemoData(): Promise<void> {
       yearId,
       categoryId: ahorro.id,
       date: `${year.year}-01-31`,
-      amount: 120,
+      amount: 100,
       note: 'Ejemplo',
       source: 'manual' as const,
       status: 'confirmed' as const,
@@ -184,7 +184,7 @@ export async function loadDemoData(): Promise<void> {
       id: newId(),
       yearId,
       categoryId: renta.id,
-      amount: 373,
+      amount: 400,
       fromMonth: 1,
       toMonth: 12,
     })

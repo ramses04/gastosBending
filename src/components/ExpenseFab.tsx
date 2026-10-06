@@ -91,7 +91,7 @@ export function ExpenseSheet({
   return (
     <div className="fixed inset-0 z-50 flex items-end bg-ink/40" onClick={onClose}>
       <div
-        className="w-full max-w-lg mx-auto rounded-t-3xl bg-paper p-4 pb-8 max-h-[90dvh] overflow-y-auto"
+        className="w-full max-w-lg lg:max-w-6xl mx-auto rounded-t-3xl bg-paper p-4 pb-8 max-h-[90dvh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center mb-3">

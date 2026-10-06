@@ -1,27 +1,117 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 import { Amount } from '../components/Amount'
 import { Card, Field, ScreenHeader, btnPrimary, inputClass } from '../components/ui'
 import { db } from '../db/db'
+import type { Category, YearRecord } from '../db/types'
 import { MONTHS } from '../domain/calendar'
-import { parseAmount } from '../domain/money'
-import { zgzMonthBreakdown } from '../domain/zgz'
+import { parseAmount, round2 } from '../domain/money'
+import { hasZgzData, zgzMonthBreakdown } from '../domain/zgz'
 import { isoDate, newId, todayIso } from '../lib/ids'
 import { useYearState } from '../state/YearContext'
+
+const ZGZ_COLOR = '#7ba3b8'
+
+function amountToInput(value: number): string {
+  if (!value) return ''
+  return String(round2(value)).replace('.', ',')
+}
+
+const mortgageEnsure = new Map<string, Promise<void>>()
+
+async function ensureZgzMortgageCategory(year: YearRecord): Promise<void> {
+  const current = mortgageEnsure.get(year.id)
+  if (current) return current
+  const job = createZgzMortgageCategory(year).finally(() => mortgageEnsure.delete(year.id))
+  mortgageEnsure.set(year.id, job)
+  return job
+}
+
+async function createZgzMortgageCategory(year: YearRecord): Promise<void> {
+  const mortgage = await db.transaction('rw', db.categories, async () => {
+    const existing = await db.categories.where('yearId').equals(year.id).toArray()
+    if (!hasZgzData(existing)) return null
+    const found = existing.find((c) => c.group === 'zgz' && c.isZgzMortgage)
+    if (found) return found
+    const sortOrder = Math.max(0, ...existing.filter((c) => c.group === 'zgz').map((c) => c.sortOrder)) + 1
+    const created: Category = {
+      id: newId(),
+      yearId: year.id,
+      name: 'Hipoteca',
+      group: 'zgz',
+      color: ZGZ_COLOR,
+      sortOrder,
+      validFrom: 1,
+      validTo: 12,
+      archived: false,
+      isZgzMortgage: true,
+    }
+    await db.categories.add(created)
+    return created
+  })
+  if (mortgage) await moveMortgageOverrides(year, mortgage)
+}
+
+async function moveMortgageOverrides(year: YearRecord, mortgage: Category): Promise<void> {
+  const fresh = await db.years.get(year.id)
+  const overrides = fresh?.zgzMortgageOverrides
+  if (!fresh || !overrides) return
+  const entries = Object.entries(overrides)
+  if (entries.length) {
+    await db.movements.bulkAdd(
+      entries.map(([month, amount]) => ({
+        id: newId(),
+        yearId: year.id,
+        categoryId: mortgage.id,
+        date: isoDate(year.year, Number(month) || 1, 10),
+        amount,
+        source: 'manual' as const,
+        status: 'confirmed' as const,
+      })),
+    )
+  }
+  delete fresh.zgzMortgageOverrides
+  await db.years.put(fresh)
+}
 
 export function ZgzPage() {
   const { year, settings, categories, movements } = useYearState()
   const zgzCats = categories.filter((c) => c.group === 'zgz' && !c.archived).sort((a, b) => a.sortOrder - b.sortOrder)
+  const mortgageCat = zgzCats.find((c) => c.isZgzMortgage)
   const firstZgzId = zgzCats[0]?.id
   const [categoryId, setCategoryId] = useState('')
   const [month, setMonth] = useState(String(new Date().getMonth() + 1))
   const [amount, setAmount] = useState('')
+  const sheetMortgageRef = useRef(0)
+
+  useEffect(() => {
+    if (!year || !hasZgzData(categories)) return
+    let cancelled = false
+    void ensureZgzMortgageCategory(year).catch((err) => {
+      if (!cancelled) console.error(err)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [year, categories])
 
   useEffect(() => {
     if (!categoryId && firstZgzId) setCategoryId(firstZgzId)
   }, [categoryId, firstZgzId])
 
+  const sheetMortgage =
+    year && settings
+      ? zgzMonthBreakdown(movements, categories, settings, year.year, Number(month) || 1).mortgageFromSheet
+      : 0
+  sheetMortgageRef.current = sheetMortgage
+
+  useEffect(() => {
+    if (!mortgageCat || categoryId !== mortgageCat.id) return
+    setAmount(amountToInput(sheetMortgageRef.current))
+  }, [categoryId, month, mortgageCat?.id])
+
   if (!year || !settings) return null
+  if (!hasZgzData(categories)) return <Navigate to="/mas" replace />
 
   async function add() {
     if (!year) return
@@ -45,7 +135,7 @@ export function ZgzPage() {
       <ScreenHeader title="ZGZ" action={<Link to="/mas" className="text-sm underline">Volver</Link>} />
       <p className="text-sm text-ink/70 mb-3">
         Gastos del segundo inmueble. No entran en fijos ni ocio. A devolver = renta de referencia − hipoteca −
-        estos gastos.
+        estos gastos. La hipoteca se añade como el resto; si el mes no tiene importe, se usa la de gastos fijos.
       </p>
       <Card className="mb-4">
         <Field label="Categoría ZGZ">
@@ -74,7 +164,7 @@ export function ZgzPage() {
         </button>
       </Card>
       <div className="overflow-x-auto -mx-4 px-4">
-        <table className="w-full text-sm min-w-[36rem]">
+        <table className="w-full text-sm min-w-[36rem] lg:min-w-0">
           <thead>
             <tr className="bg-accent/70">
               <th className="text-left p-2">Mes</th>

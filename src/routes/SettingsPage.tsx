@@ -4,15 +4,17 @@ import { Card, Field, ScreenHeader, btnPrimary, inputClass } from '../components
 import { db } from '../db/db'
 import { switchActiveYear } from '../db/years'
 import { parseAmount } from '../domain/money'
+import { hasZgzData } from '../domain/zgz'
 import { todayIso } from '../lib/ids'
 import { useYearState } from '../state/YearContext'
 
 export function SettingsPage() {
-  const { year, years, settings } = useYearState()
+  const { year, years, settings, categories } = useYearState()
+  const showZgz = hasZgzData(categories)
   const [updatedAt, setUpdatedAt] = useState(year?.updatedAt ?? todayIso())
   const [opening, setOpening] = useState(String(year?.openingSavings ?? 0).replace('.', ','))
-  const [split, setSplit] = useState(String(settings?.utilitiesSplit ?? 3))
-  const [rent, setRent] = useState(String(settings?.zgzReferenceRent ?? 1119.68).replace('.', ','))
+  const [split, setSplit] = useState(String(settings?.utilitiesSplit ?? 1))
+  const [rent, setRent] = useState(String(settings?.zgzReferenceRent ?? 0).replace('.', ','))
   const [msg, setMsg] = useState<string | null>(null)
 
   if (!year || !settings) return null
@@ -21,7 +23,7 @@ export function SettingsPage() {
   async function save() {
     const openingSavings = parseAmount(opening)
     const utilitiesSplit = Number(split.replace(',', '.'))
-    const zgzReferenceRent = parseAmount(rent)
+    const zgzReferenceRent = showZgz ? parseAmount(rent) : (settings.zgzReferenceRent ?? 0)
     if (openingSavings === null || !utilitiesSplit || zgzReferenceRent === null) return
     await db.years.update(activeYear.id, { openingSavings, updatedAt })
     await db.settings.update('global', { utilitiesSplit, zgzReferenceRent })
@@ -54,9 +56,11 @@ export function SettingsPage() {
         <Field label="Personas por defecto en facturas nuevas">
           <input className={inputClass} inputMode="decimal" value={split} onChange={(e) => setSplit(e.target.value)} />
         </Field>
-        <Field label="Renta de referencia ZGZ">
-          <input className={inputClass} inputMode="decimal" value={rent} onChange={(e) => setRent(e.target.value)} />
-        </Field>
+        {showZgz ? (
+          <Field label="Renta de referencia ZGZ">
+            <input className={inputClass} inputMode="decimal" value={rent} onChange={(e) => setRent(e.target.value)} />
+          </Field>
+        ) : null}
         <button type="button" className={`${btnPrimary} w-full`} onClick={() => void save()}>
           Guardar
         </button>

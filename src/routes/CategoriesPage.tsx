@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card, Field, ScreenHeader, btnGhost, btnPrimary, inputClass } from '../components/ui'
 import { db } from '../db/db'
 import type { Category, CategoryGroup } from '../db/types'
+import { hasZgzData } from '../domain/zgz'
 import { newId } from '../lib/ids'
 import { useYearState } from '../state/YearContext'
 
@@ -28,6 +29,8 @@ export function CategoriesPage() {
   const [to, setTo] = useState('12')
   const [openGroup, setOpenGroup] = useState<CategoryGroup | null>(null)
   const [openCategoryId, setOpenCategoryId] = useState<string | null>(null)
+  const showZgz = hasZgzData(categories)
+  const groups = showZgz ? GROUPS : GROUPS.filter((g) => g.id !== 'zgz')
 
   async function add() {
     if (!year || !name.trim()) return
@@ -55,7 +58,7 @@ export function CategoriesPage() {
         </Field>
         <div className="grid grid-cols-3 gap-2">
           <select className={inputClass} value={group} onChange={(e) => setGroup(e.target.value as CategoryGroup)}>
-            {GROUPS.map((g) => (
+            {groups.map((g) => (
               <option key={g.id} value={g.id}>
                 {g.label}
               </option>
@@ -69,7 +72,7 @@ export function CategoriesPage() {
         </button>
       </Card>
       <div className="space-y-2">
-        {GROUPS.map((g) => {
+        {groups.map((g) => {
           const list = categories.filter((c) => c.group === g.id).sort((a, b) => a.sortOrder - b.sortOrder)
           if (!list.length) return null
           const expanded = openGroup === g.id
@@ -93,6 +96,7 @@ export function CategoriesPage() {
                     <CategoryRow
                       key={c.id}
                       category={c}
+                      showZgz={showZgz}
                       expanded={openCategoryId === c.id}
                       onToggle={() => setOpenCategoryId((id) => (id === c.id ? null : c.id))}
                     />
@@ -123,10 +127,12 @@ async function toggleMortgage(category: Category) {
 
 function CategoryRow({
   category,
+  showZgz,
   expanded,
   onToggle,
 }: {
   category: Category
+  showZgz: boolean
   expanded: boolean
   onToggle: () => void
 }) {
@@ -170,15 +176,17 @@ function CategoryRow({
             >
               {category.archived ? 'Restaurar' : 'Archivar'}
             </button>
-            {category.isMortgage ? <span className="text-ink/50">Hipoteca ZGZ</span> : null}
+            {showZgz && category.isMortgage ? <span className="text-ink/50">Hipoteca ZGZ</span> : null}
             {category.linkedUtility ? <span className="text-ink/50">Suministro {category.linkedUtility}</span> : null}
-            <button
-              type="button"
-              className={`${btnGhost} ml-auto py-1 px-2 min-h-8 text-xs`}
-              onClick={() => void toggleMortgage(category)}
-            >
-              {category.isMortgage ? 'Quitar hipoteca' : 'Marcar hipoteca'}
-            </button>
+            {showZgz ? (
+              <button
+                type="button"
+                className={`${btnGhost} ml-auto py-1 px-2 min-h-8 text-xs`}
+                onClick={() => void toggleMortgage(category)}
+              >
+                {category.isMortgage ? 'Quitar hipoteca' : 'Marcar hipoteca'}
+              </button>
+            ) : null}
           </div>
         </div>
       ) : null}

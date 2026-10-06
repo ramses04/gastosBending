@@ -9,6 +9,8 @@ export interface YearRecord {
   openingSavings: number
   updatedAt: string
   notes?: string
+  /** Importe de hipoteca usado en ZGZ por mes ("1"…"12"), si se aparta del de gastos fijos. */
+  zgzMortgageOverrides?: Record<string, number>
 }
 
 export interface AppSettings {
@@ -44,6 +46,8 @@ export interface Category {
   archived: boolean
   linkedUtility?: UtilityKind
   isMortgage?: boolean
+  /** Hipoteca del bloque ZGZ. No entra en la suma de gastos del segundo inmueble. */
+  isZgzMortgage?: boolean
 }
 
 export interface Recurrence {

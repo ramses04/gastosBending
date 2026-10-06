@@ -103,6 +103,24 @@ textarea {
   width: 2.75rem;
 }
 
+@media (min-width: 64rem) {
+  .year-grid {
+    width: 100%;
+  }
+
+  .year-grid .col-concept {
+    width: 14%;
+  }
+
+  .year-grid .col-month {
+    width: 6.4%;
+  }
+
+  .year-grid .col-pct {
+    width: 9.2%;
+  }
+}
+
 .year-grid td {
   position: relative;
   overflow: hidden;

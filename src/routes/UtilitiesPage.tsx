@@ -19,7 +19,7 @@ const KINDS: { id: UtilityKind; label: string }[] = [
 
 export function UtilitiesPage() {
   const { year, settings, utilityBills } = useYearState()
-  const defaultSplit = settings?.utilitiesSplit ?? 3
+  const defaultSplit = settings?.utilitiesSplit ?? 1
   const [kind, setKind] = useState<UtilityKind>('luz')
   const [month, setMonth] = useState(String(new Date().getMonth() + 1))
   const [amount, setAmount] = useState('')

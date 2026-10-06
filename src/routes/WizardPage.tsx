@@ -7,9 +7,9 @@ import { btnPrimary, Field, inputClass } from '../components/ui'
 
 export function WizardPage() {
   const [year, setYear] = useState(String(currentYear()))
-  const [income, setIncome] = useState('2058')
+  const [income, setIncome] = useState('')
   const [savings, setSavings] = useState('0')
-  const [split, setSplit] = useState('3')
+  const [split, setSplit] = useState('1')
   const [note, setNote] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -56,7 +56,7 @@ export function WizardPage() {
         <Field label="Notas de salario (opcional)">
           <input
             className={inputClass}
-            placeholder="p. ej. 33k desde 05 / 29k hasta 04"
+            placeholder="p. ej. subida de sueldo en mayo"
             value={note}
             onChange={(e) => setNote(e.target.value)}
           />
